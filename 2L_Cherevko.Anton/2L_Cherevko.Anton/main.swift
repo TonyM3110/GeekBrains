@@ -56,14 +56,43 @@ while lengh2 < 100 {
     }
     
 }
-print ("Массив из четных числел", array2)
+print ("Массив из четных числел:", array2)
 
 // Пятое задание
-var numFibArray = [Double]()
-numFibArray.append(0)
-var 
 
-func numFib (x:Int)
+func numFibArray(_ n: Int) -> [Double] {
+    var numFibonacci: [Double] = [1, 1]
+    (2...n).forEach{ i in
+        numFibonacci.append(numFibonacci[i - 1] + numFibonacci[i - 2])
+    }
+    return numFibonacci
+}
+print(numFibArray(50))
 
 
+// Шестое задание
 
+func SimpNumb (num: Int) -> Bool {
+    if num < 2 {
+        return false
+    }
+    for i in 2 ..< num {
+        if num % i == 0 {
+            return false
+        }
+    }
+    return true
+}
+func SimpNumbArray () -> [Int] {
+    var Numb = [Int]()
+    var i = 2
+    while Numb.count < 100 {
+        if SimpNumb(num: i) {
+            Numb.append(i)
+        }
+        i += 1
+    }
+    
+    return Numb
+}
+print (SimpNumbArray())
