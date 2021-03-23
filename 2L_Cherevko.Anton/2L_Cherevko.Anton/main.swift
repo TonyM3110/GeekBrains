@@ -67,7 +67,7 @@ func numFibArray(_ n: Int) -> [Double] {
     }
     return numFibonacci
 }
-print(numFibArray(50))
+print("Массив чисел Фибоначи", numFibArray(50))
 
 
 // Шестое задание
@@ -95,4 +95,15 @@ func SimpNumbArray () -> [Int] {
     
     return Numb
 }
-print (SimpNumbArray())
+// другое решение
+/*func primeNumbers(arrayPassed: [Int]) -> [Int] {
+    var primes: [Int] = []
+    var newArr = arrayPassed
+    while let newP = newArr.first {
+        primes.append(newP)
+        newArr = newArr.filter { $0 % newP != 0 }
+    }
+    return primes
+}
+print(primeNumbers(arrayPassed: Array(2...100)))
+ */
