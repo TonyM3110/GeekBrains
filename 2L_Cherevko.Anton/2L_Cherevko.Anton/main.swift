@@ -50,7 +50,7 @@ while lengh2 < 100 {
     array2.append (lengh2+1)
     lengh2 += 1
     for value  in array2 {
-        if ((value % 2) != 0)  {
+        if ((value % 2 == 0) || (value % 3 != 0))  {
             array2.remove(at: array2.firstIndex(of: value)!)
         }
     }
